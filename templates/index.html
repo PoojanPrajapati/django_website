@@ -7,7 +7,7 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="container " style="margin-top: 40px; margin-left: 250px;">
+  <div class="container " style="margin-top: 10px; margin-left: 250px;">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://images.unsplash.com/photo-1600658747056-eb00845297a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"  alt="..." style="height: 500px; width: 1000px; ">
@@ -30,17 +30,18 @@
   </button>
 </div>
 
-<div class="container" style="margin-top: 30px;" >
+<div class="container" style="margin-top: 30px; "  >
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+    {% for x in event_event %}
     <div class="col">
       <div class="card shadow-sm" style="background-color: aqua;">
         
         
           
         <div class="card-body" style="background-color: aqua;">
-          <img src="https://images.unsplash.com/photo-1568639152391-61b4303bead7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHN0YXRpb25lcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"  alt="..." style="height: 200px; width: 380px; ">
-          <p class="card-text" style="font-size: 50px; margin-left:130px">diary</p>
+          <img src="{{x.image}}" height=270px width=270px>
+          <p class="card-text" style="font-size: 20px; margin-left:10px">{{x.title}}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -51,88 +52,8 @@
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card shadow-sm" style="background-color: aqua;">
-        <img src="https://images.unsplash.com/photo-1543237935-aa9ffc1c0bc0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"  alt="..." style="height: 200px; width: 380px; margin-left: 20px; margin-top: 13px; ">
+   {% endfor %}
 
-        <div class="card-body" style="background-color: aqua;">
-          <p class="card-text" style="font-size: 50px; margin-left:100px">tube colors</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm" style="background-color: aqua;">
-        <img src="https://images.unsplash.com/photo-1611066696642-53882ca46012?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80"  alt="..." style="height: 200px; width: 380px; margin-left: 20px; margin-top: 13px;  ">
-
-        <div class="card-body" style="background-color: aqua;">
-          <p class="card-text" style="font-size: 50px; margin-left:130px">U pins</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card shadow-sm" style="background-color: aqua;">
-        <img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"  alt="..." style="height: 200px; width: 380px; margin-left: 20px; margin-top: 13px;  ">
-
-        <div class="card-body" style="background-color: aqua;">
-          <p class="card-text" style="font-size: 50px; margin-left:30px">fountain pens</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm" style="background-color: aqua;">
-        <img src="https://images.unsplash.com/photo-1613897931373-3ab4fe7a6a01?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA3fHxzdGF0aW9uZXJ5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"  alt="..." style="height: 200px; width: 380px; margin-left: 20px; margin-top: 13px;  ">
-
-        <div class="card-body" style="background-color: aqua;">
-          <p class="card-text" style="font-size: 50px; margin-left:100px;">cello taps</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm" style="background-color: aqua;">
-        <img src="https://images.unsplash.com/photo-1587115508501-2628609cbea6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"  alt="..." style="height: 200px; width: 380px;  margin-left: 20px; margin-top: 13px; ">
-
-        <div class="card-body" style="background-color: aqua;">
-          <p class="card-text" style="font-size: 50px; margin-left:130px;">seasors</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
->
   
     
   </div>

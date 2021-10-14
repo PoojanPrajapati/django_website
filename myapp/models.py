@@ -10,3 +10,12 @@ class Contact(models.Model):
      address = models.TextField()
      date = models.DateField()
 
+     def __str__(self):
+       return self.name
+
+class detail(models.Model):
+     title=models.CharField(max_length=122)
+     image=models.ImageField(upload_to="static")
+   
+     def __str__(self):
+       return self.title

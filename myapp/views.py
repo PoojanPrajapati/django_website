@@ -1,10 +1,11 @@
 from django import http
 from django.shortcuts import render,HttpResponse,render
 from datetime import datetime
-from myapp.models import Contact
+from myapp.models import Contact,detail
 # Create your views here.
 def index(request):
-    return render(request,"index.html", )
+    event=detail.objects.all()
+    return render(request,"index.html", {"event_event":event})
 
 def about(request):
     return render(request,"about.html", )
